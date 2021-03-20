@@ -15,19 +15,19 @@ import org.openqa.selenium.interactions.Actions;
 
         @Before
         public void setUp() throws InterruptedException {
-
             Thread.sleep(10);
+            
             logger.info("--- TEST BAŞLADI ---");
-            //*DEĞİŞTİR//
-            System.setProperty("webdriver.chrome.driver", "C:\\Users\\SEFA\\Desktop\\Testinium Proje\\TestiniumProject2_SefaOkumus\\chromedriver.exe"); //chromedriver.exe uygun dosya konumuna yerleştirilir.
+            System.setProperty("webdriver.chrome.driver", "/src/main/resources/chromedriver.exe");
             driver = new ChromeDriver();
-            driver.manage().window().maximize();  //Browser tam ekran moduna alınır.
+            driver.manage().window().maximize(); 
 
 
         }
         @Test
         public void correctOpen() throws InterruptedException {
             Thread.sleep(10);
+            
             driver.get("https://www.gittigidiyor.com/");
 
             Assert.assertEquals(driver.getTitle(), "GittiGidiyor - Türkiye'nin Öncü Alışveriş Sitesi");
@@ -35,17 +35,17 @@ import org.openqa.selenium.interactions.Actions;
             logger.info("Anasayfaya girildi"); //
 
             driver.navigate().to("https://www.gittigidiyor.com/uye-girisi");
-            driver.findElement(By.id("L-UserNameField")).sendKeys("wbtstacc@gmail.com"); //DEĞİŞTİR
-            driver.findElement(By.id("L-PasswordField")).sendKeys("a1234567");  //DEĞİŞTİR
+            driver.findElement(By.id("L-UserNameField")).sendKeys(USERNAME); 
+            driver.findElement(By.id("L-PasswordField")).sendKeys(PASSWORD); 
             driver.findElement(By.id("gg-login-enter")).click();
             Assert.assertEquals(driver.getCurrentUrl(), "https://www.gittigidiyor.com/");
             logger.info("Login yapıldı");
 
             driver.findElement(By.xpath("//*[@id=\"main-header\"]/div[3]/div/div/div/div[2]/form/div/div[1]/div[2]/input")).sendKeys("bilgisayar", Keys.RETURN);
-            logger.info("Bilgisayar kelimesi aratıldı"); //
+            logger.info("Bilgisayar kelimesi aratıldı");
 
             JavascriptExecutor js = ((JavascriptExecutor) driver);
-            js.executeScript("window.scrollTo(0, document.body.scrollHeight)"); //DEĞİŞTİR//Sayfanın en altına indirme işlemi yapıldı.
+            js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
 
             Thread.sleep(500);
 
@@ -54,7 +54,7 @@ import org.openqa.selenium.interactions.Actions;
             logger.info("2. Sayfa açıldı");
 
             driver.manage().timeouts().pageLoadTimeout(5, TimeUnit.SECONDS);
-            js.executeScript("window.scrollTo(0, document.body.scrollHeight)"); //DEĞİŞTİR //Sayfanın en altına inildi.
+            js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
 
             driver.findElement(By.id("item-info-block-666551478")).click();
             logger.info("2.Sıradaki ürün seçildi.");
@@ -70,7 +70,7 @@ import org.openqa.selenium.interactions.Actions;
             driver.findElement(By.id("add-to-basket")).click();
             logger.info("Ürün sepete eklendi");
 
-            driver.findElement(By.xpath("//*[@id=\"header_wrapper\"]/div[4]/div[3]/a/div[1]")).click();  //Sepete gidildi
+            driver.findElement(By.xpath("//*[@id=\"header_wrapper\"]/div[4]/div[3]/a/div[1]")).click(); 
             logger.info("Sepete gidildi");
 
             WebElement PBasketPrice = driver.findElement(By.xpath("//*[@id=\"cart-price-container\"]/div[3]/p"));
@@ -90,7 +90,7 @@ import org.openqa.selenium.interactions.Actions;
             logger.info("Ürün Adedi : 2 ");
 
             driver.findElement(By.cssSelector(".btn-delete.btn-update-item.hidden-m")).click();
-            logger.info("Sepet Boşaltıldı");   //Ürünler silinir.
+            logger.info("Sepet Boşaltıldı");  
 
             Thread.sleep(500);
 
