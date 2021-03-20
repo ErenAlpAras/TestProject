@@ -4,3 +4,18 @@
 2021-03-20 23:45:32 INFO  TestiniumTEST:20 - --- TEST BAŞLADI ---
 2021-03-20 23:45:36 INFO  TestiniumTEST:35 - Anasayfaya girildi
 2021-03-20 23:45:39 INFO  TestiniumTEST:109 - --- TEST SONLANDI ---
+2021-03-21 00:05:22 INFO  TestiniumTEST:20 - --- TEST BAŞLADI ---
+2021-03-21 00:05:29 INFO  TestiniumTEST:35 - Anasayfaya girildi
+2021-03-21 00:05:33 INFO  TestiniumTEST:42 - Login yapıldı
+2021-03-21 00:05:37 INFO  TestiniumTEST:45 - Bilgisayar kelimesi aratıldı
+2021-03-21 00:05:39 INFO  TestiniumTEST:54 - 2. Sayfa açıldı
+2021-03-21 00:05:41 INFO  TestiniumTEST:60 - 2.Sıradaki ürün seçildi.
+2021-03-21 00:05:41 INFO  TestiniumTEST:68 - Ürün Fiyatı : 4.155,90 TL
+2021-03-21 00:05:41 INFO  TestiniumTEST:71 - Ürün sepete eklendi
+2021-03-21 00:05:42 INFO  TestiniumTEST:74 - Sepete gidildi
+2021-03-21 00:05:42 INFO  TestiniumTEST:78 - Ürünün Sepetteki Fiyatı : 4.155,90 TL
+2021-03-21 00:05:42 INFO  TestiniumTEST:82 - Fiyat doğrulaması yapıldı
+2021-03-21 00:05:43 INFO  TestiniumTEST:90 - Ürün Adedi : 2 
+2021-03-21 00:05:43 INFO  TestiniumTEST:93 - Sepet Boşaltıldı
+2021-03-21 00:05:43 INFO  TestiniumTEST:101 - Sepet boş
+2021-03-21 00:05:44 INFO  TestiniumTEST:109 - --- TEST SONLANDI ---
