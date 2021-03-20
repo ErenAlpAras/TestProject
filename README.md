@@ -9,7 +9,7 @@ gittigidiyor Test
 - Arama kutucuğuna bilgisayar kelimesi girilir.
 - Arama sonuçları sayfasından 2.sayfa açılır.
 - 2.sayfanın açıldığı kontrol edilir.
-- Sonuca göre sergilenen ürünlerden rastgele bir ürün seçilir.
+- Sonuca göre sergilenen ürünlerden rastgele bir ürün seçilir. (2.Sıradaki ürün seçildi.)
 - Seçilen ürün sepete eklenir.
 - Ürün sayfasındaki fiyat ile sepette yer alan ürün fiyatının doğruluğu karşılaştırılır.
 - Adet arttırılarak ürün adedinin 2 olduğu doğrulanır.
